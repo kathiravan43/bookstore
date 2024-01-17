@@ -1,0 +1,29 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "title": "java",
+      "description": "java is a good language"
+    },
+    {
+      "id": 2,
+      "title": "html",
+      "description": "its easy to learn"
+    },
+    {
+      "id": 5,
+      "title": "haha",
+      "description": "jajaja"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

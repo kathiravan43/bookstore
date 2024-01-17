@@ -1,0 +1,47 @@
+/* Add this to your component's CSS file or styles.scss */
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Optional: Add styles to highlight validation errors */
+.ng-invalid {
+  border: 1px solid #ff0000;
+}
+.ng-valid{
+  border: 1px solid green;
+}

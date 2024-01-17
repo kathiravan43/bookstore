@@ -1,0 +1,19 @@
+<!-- home.component.html -->
+<h3>Book Details</h3>
+<div>
+  @for(books of bookDetails; track books.id; let index=$index;){
+      book Id: {{books.id}} | name: {{books.title}} |   @if(!button[index]){
+        <p (click)="viewDescription(index)"> view content</p>
+        }
+        @else {
+          <p (click)="hideDescription(index)"> hide content</p>
+
+        }
+
+      @if(description[index]){
+        <p>{{books.description}}</p>
+      }
+
+  }
+
+</div>

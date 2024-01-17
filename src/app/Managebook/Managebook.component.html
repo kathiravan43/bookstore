@@ -1,0 +1,35 @@
+<table>
+  <thead>
+    <tr>
+      <th>Book ID</th>
+      <th>Book Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  @for( details of bookDetails; track details.id ){
+    <tr>
+
+      <td>{{details.id}}</td>
+      <td>{{details.title}}</td>
+      <td><button (click)="showDetails(details.id)">Edit Book Details</button></td>
+      <td><button (click)="deleteBook(details.id)">Delete</button></td>
+    </tr>
+  }
+</table>
+@if(edit){
+<form  (ngSubmit)="saveChanges(editDetails.id)">
+  <label>Book ID:</label>
+  <input type="number" name="bookID" [(ngModel)]="editDetails.id" required>
+
+  <label>Book Name:</label>
+  <input type="text"  name="bookName" [(ngModel)]="editDetails.title" required>
+
+
+
+  <label >Description:</label>
+  <textarea  name="description" rows="4" [(ngModel)]="editDetails.description" required></textarea>
+
+  <button type="submit">Save Changes</button>
+</form>
+}
